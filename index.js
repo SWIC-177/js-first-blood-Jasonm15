@@ -1,4 +1,4 @@
-onst people = [
+const people = [
   {
     name: "John",
     age: 17,
@@ -27,4 +27,10 @@ function verifyAdulthood(personName, personAge) {
   return `You are not old enough to enter, ${personName}.`;
 }
 
-// TODO: Use a loop to call the verifyAdulthood function for each person in the people array.
+let i = 0; // Starting index
+while (i < people.length) {
+  const person = people[i]; // Get the current person
+  const message = verifyAdulthood(person.name, person.age); // Call verifyAdulthood for the current person
+  console.log(message); // Log the message to the console
+  i += 1; // Move to the next person in the array
+}
