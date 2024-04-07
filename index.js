@@ -1,9 +1,8 @@
-function greet(name) {
-  console.log(`Hello, ${name}!`);
+function createIncrementer(increment) {
+  return function (score) {
+    return score + increment;
+  };
 }
 
-function sayHello(greetingFunction, name) {
-  greetingFunction(name);
-}
-
-sayHello(greet, "John");
+const incrementByThree = createIncrementer(3);
+console.log(incrementByThree(10));
