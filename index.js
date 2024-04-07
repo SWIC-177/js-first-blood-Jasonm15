@@ -1,7 +1,9 @@
-function Nums1(a, b) {
-  return a + b;
+function greet(name) {
+  console.log(`Hello, ${name}!`);
 }
 
-const Nums2 = (num1, num2) => {
-  return num1 + num2;
-};
+function sayHello(greetingFunction, name) {
+  greetingFunction(name);
+}
+
+sayHello(greet, "John");
