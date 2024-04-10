@@ -32,13 +32,15 @@ const people = [
 ];
 
 function renameOdds(p) {
-  for (let i = 0; i < p.length; i += 1) {
-    if (p[i].id % 2 !== 0) {
-      p[i].name = "Odd Name";
+  const modifiedArray = [...p]; // Create a new array to store the modified values
+
+  for (let i = 0; i < modifiedArray.length; i += 1) {
+    if (modifiedArray[i].id % 2 !== 0) {
+      modifiedArray[i].name = "Odd Name"; // Modify the new array instead of the function parameter
     }
   }
 
-  return p;
+  return modifiedArray; // Return the modified array
 }
 
 console.log(renameOdds(people));
