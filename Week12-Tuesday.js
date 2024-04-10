@@ -32,7 +32,7 @@ const people = [
 ];
 
 function renameOdds(p) {
-  for (let i = 0; i < p.length; i++) {
+  for (let i = 0; i < p.length; i += 1) {
     if (p[i].id % 2 !== 0) {
       p[i].name = "Odd Name";
     }
