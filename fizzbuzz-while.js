@@ -9,5 +9,5 @@ while (i <= 100) {
   } else {
     console.log(i);
   }
-  i += 1;
+  i == 1;
 }
